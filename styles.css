@@ -1,0 +1,230 @@
+/* Reset básico */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Estilo geral do corpo */
+body {
+    font-family: 'Arial', sans-serif;
+    background-color: #f4f4f9;
+    color: #333;
+    line-height: 1.6;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+}
+
+/* Container centralizado */
+.container, .results-container {
+    width: 90%;
+    max-width: 1200px;
+    margin: auto;
+    padding: 20px;
+    background: #fff;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    border-radius: 8px;
+}
+
+/* Estilo dos títulos */
+h1, h2, h3 {
+    color: #444;
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+/* Estilo dos formulários */
+form {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+/* Estilo dos rótulos e campos de entrada */
+label {
+    font-weight: bold;
+    margin-bottom: 5px;
+}
+
+input[type="text"], input[type="password"], input[type="number"], select {
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    font-size: 16px;
+    width: 100%;
+}
+
+input[type="color"] {
+    width: 100%;
+    height: 40px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    padding: 0;
+    cursor: pointer;
+}
+
+input[type="submit"], button {
+    padding: 10px;
+    background-color: #007bff;
+    color: #fff;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 16px;
+}
+
+input[type="submit"]:hover, button:hover {
+    background-color: #0056b3;
+}
+
+/* Estilo dos links */
+a {
+    color: #007bff;
+    text-decoration: none;
+}
+
+a:hover {
+    text-decoration: underline;
+}
+
+/* Estilo da página de login */
+.login-container {
+    max-width: 400px;
+    width: 100%;
+    padding: 40px;
+    background: #fff;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    border-radius: 8px;
+    text-align: center;
+}
+
+.login-container input[type="text"], .login-container input[type="password"] {
+    width: 100%;
+    margin-bottom: 20px;
+}
+
+/* Estilo da mensagem de erro */
+.error-message {
+    color: #ff0000;
+    background-color: #ffe6e6;
+    border: 1px solid #ff0000;
+    border-radius: 4px;
+    padding: 10px;
+    margin-bottom: 20px;
+}
+
+/* Estilo da mensagem de sucesso */
+.success-message {
+    color: #008000;
+    background-color: #e6ffe6;
+    border: 1px solid #008000;
+    border-radius: 4px;
+    padding: 10px;
+    margin-bottom: 20px;
+}
+
+/* Estilo do dashboard */
+.dashboard-container {
+    text-align: center;
+}
+
+.dashboard-container nav ul {
+    list-style: none;
+    padding: 0;
+}
+
+.dashboard-container nav ul li {
+    display: inline;
+    margin: 0 15px;
+}
+
+.dashboard-container nav ul li a {
+    padding: 10px 20px;
+    background-color: #007bff;
+    color: #fff;
+    border-radius: 4px;
+}
+
+.dashboard-container nav ul li a:hover {
+    background-color: #0056b3;
+}
+
+/* Estilo das imagens na avaliação */
+.evaluation-container .images {
+    display: flex;
+    gap: 20px;
+    justify-content: center;
+}
+
+.evaluation-container .images label {
+    cursor: pointer;
+}
+
+.evaluation-container .images img {
+    max-width: 100px;
+    max-height: 100px;
+    width: 100%;
+    height: auto;
+    border: 2px solid transparent;
+    border-radius: 8px;
+}
+
+.evaluation-container .images input[type="radio"]:checked + label img {
+    border-color: #007bff;
+}
+
+/* Estilo dos resultados */
+.results-container table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 20px;
+}
+
+.results-container th, .results-container td {
+    padding: 10px;
+    border: 1px solid #ccc;
+    text-align: left;
+}
+
+.results-container th {
+    background-color: #f4f4f9;
+}
+
+.results-container img {
+    border-radius: 50%;
+}
+
+/* Estilo do botão de voltar para a dashboard */
+.back-button {
+    display: inline-block;
+    margin-bottom: 20px;
+    padding: 10px 20px;
+    background-color: #007bff;
+    color: #fff;
+    border-radius: 4px;
+    text-decoration: none;
+    text-align: center;
+}
+
+.back-button:hover {
+    background-color: #0056b3;
+}
+
+/* Estilo responsivo */
+@media (max-width: 768px) {
+    .container, .results-container {
+        width: 95%;
+        padding: 10px;
+    }
+
+    .dashboard-container nav ul li {
+        display: block;
+        margin: 10px 0;
+    }
+
+    .evaluation-container .images {
+        flex-direction: column;
+    }
+}
